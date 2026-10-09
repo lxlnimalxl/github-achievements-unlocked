@@ -1,0 +1,10 @@
+name: Achievement CI Pipeline
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Verify Badges Pipeline
+        run: echo "GitHub Achievements Pipeline is Active!"
